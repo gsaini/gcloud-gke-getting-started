@@ -1,0 +1,23 @@
+{
+  "name": "gcloud-gke-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsaini/gcloud-gke-getting-started.git"
+  },
+  "keywords": [
+    "Google-Cloud-Platform",
+    "Kubernetes"
+  ],
+  "author": "Gopal Saini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsaini/gcloud-gke-getting-started/issues"
+  },
+  "homepage": "https://github.com/gsaini/gcloud-gke-getting-started#readme"
+}
