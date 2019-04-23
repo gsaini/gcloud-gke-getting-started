@@ -10,7 +10,12 @@ Google cloud platform - Kubernetes
 
 `nginx -s stop -p ./ -c nginx.conf`
 
-## Steps -
+## Steps - To run docker container on local machine...
+
+    1. `docker build -t nginx-server .`
+    2. `docker run --name nginx-container -d -p 443:443 nginx-server` # To expose ports outside container.
+
+## Steps - Google Cloud Platform - GKE
 
     1. Docker - build an image. `docker build -t gcr.io/gcloud-gke-getting-started/nginx-app:v1 .`
     2. Docker - push to google registry. `docker push gcr.io/gcloud-gke-getting-started/nginx-app:v1`
@@ -21,3 +26,14 @@ Google cloud platform - Kubernetes
        3. kubectl get service
        4. kubectl scale deployment nginx-webapp --replicas=1
        5. kubectl get deployment hello-web
+
+## Steps - Google Cloud Platform - Deployment Manager
+
+    - To Create deployment
+      - `gcloud deployment-manager deployments create my-container --config deployment-manager/container_vm.yaml`
+
+    - To Describe deployment
+      - `gcloud deployment-manager deployments describe quick-start-deployment`
+      - `gcloud compute instances describe quickstart-deployment-vm`
+  
+    - To Delete deployment `gcloud deployment-manager deployments delete quick-start-deployment`
