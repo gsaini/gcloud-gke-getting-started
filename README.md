@@ -12,8 +12,10 @@ Google cloud platform - Kubernetes
 
 ## Steps - To run docker container on local machine...
 
+====> Gcloud Project ID.
+
     1. `docker build -t nginx-server .`
-    2. `docker run --name nginx-container -d -p 443:443 nginx-server` # To expose ports outside container.
+    2. `docker run --name nginx-container01 -d -p 443:443 nginx-server` # To expose ports outside container.
 
 ## Steps - Google Cloud Platform - GKE
 
@@ -25,7 +27,7 @@ Google cloud platform - Kubernetes
        2. Expose the application to the Internet `kubectl expose deployment nginx-webapp --type=LoadBalancer --port 443 --target-port 443`
        3. kubectl get service
        4. kubectl scale deployment nginx-webapp --replicas=1
-       5. kubectl get deployment hello-web
+       5. kubectl get deployment nginx-webapp
 
 ## Steps - Google Cloud Platform - Deployment Manager
 
